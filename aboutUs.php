@@ -196,6 +196,69 @@ body, html {
 </style>
 </head>
 <body>
+	<?php 
+class Person{
+	public $emri;
+	public $mbiemri;
+	public $email;
+
+	public function __construct($emri,$mbiemri,$email){
+		$this->emri = $emri;
+		$this->mbiemri = $mbiemri;
+		$this->email = $email;
+		echo __CLASS__." u krijua.<br>";
+	}
+	public function __destruct(){
+		echo __CLASS__." u shkatrrua.<br>";
+	}
+	public function setEmri($name){
+		$this->emri = $emri; 
+	}
+	public function getEmri(){
+		return $this->emri;
+	}
+	public function setMbiemri($name){
+		$this->mbiemri = $mbiemri;
+	}
+	public function getMbiemri(){
+		return $this->mbiemri;
+	}
+	public function setEmail($name){
+		$this->email = $email;
+	}
+	public function getEmail(){
+		return $this->email;
+	}
+}
+class TeDhenat extends Person{
+	public $profesioni;
+	public $vendi;
+
+	public function __construct($emri,$mbiemri,$email,$profesioni,$vendi){
+		parent::__construct($emri,$mbiemri,$email);
+		$this->profesioni = $profesioni;
+		$this->vendi = $vendi;
+		echo __CLASS__." u krijua.<br>";
+	}
+	public function setProfesioni($profesioni){
+		$this->profesioni = $profesioni; 
+	}
+	public function getProfesioni(){
+		return $this->profesioni;
+	}
+	public function setVendi($vendi){
+		$this->vendi = $vendi;
+	}
+	public function getVendi(){
+		return $this->vendi;
+	}
+}
+
+$personi1 = new TeDhenat("Uran","Lajqi","uran_lajqi_1@outlook.com","Administrues i te dhenave","Peje");
+$personi2 = new TeDhenat("Lirim","Islami","lirim.islami@gmail.com","IT","Viti");
+$personi3 = new TeDhenat("Rinor","Mehmeti","rinormehemti7@hotmail.com","Programer","Firaje");
+
+?>
 <div class="topnav" style="margin-bottom: 0px;">
 <a href="#" class="fa fa-apple" style="font-size:30px;color:white;padding-top:10px;padding-bottom:8px;"></a>
   <a class="active" href="#home">Home</a>
