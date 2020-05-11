@@ -165,6 +165,34 @@ body, html {
   transform: translate(-50%, -50%);
   color: white;
 }
+	.footer {
+   width: 100%;
+   background-color: black;
+   color: white;
+   display: inline-flex;
+
+}
+.footer p {
+   vertical-align: middle;
+   line-height: 4em;
+   padding-bottom: 0px;
+   margin-bottom: 0px;
+   flex: 1;
+   text-align:left;
+   font-size: 20px;
+   margin-left: 40px;
+   margin-top: 4px;
+}
+.footer input{
+	display: inline-flex;
+	padding: 10px;
+	margin-right: 20px;
+	margin-top: 22px;
+	border-radius: 8px;
+	margin-bottom: 10px;
+	flex: 2;
+
+}
 </style>
 </head>
 <body>
@@ -249,9 +277,25 @@ body, html {
   </div>
 </div>
 
-<div class="footer">
-	<p>&copy Te drejtat e rezervuara</p>
-</div>
+
+	<div class="footer">
+	  <p>&copy Te drejtat e rezervuara</p>
+	  <?php 
+			if(isset($_POST['submit']))
+			{
+			$name = $_POST['name'];
+			$file = fopen("Koment.txt", "w+") or die("file not opern");
+			$s = $name."\n";
+			fputs($file,$s) or die("Data not write");
+			fclose($file);
+			}
+			?>
+
+			<form action="#aboutUs" method="post">
+			    Koment:<input type="text" name="name">
+			    <input type="submit" name="submit" value="Write to file">
+			</form>
+	</div>
 
 
 </body>
