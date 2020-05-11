@@ -110,6 +110,21 @@ function ndarja($text){
 	
 	<div class="footer">
 	  <p>&copy Te drejtat e rezervuara</p>
+	  <?php 
+			if(isset($_POST['submit']))
+			{
+			$name = $_POST['name'];
+			$file = fopen("Koment.txt", "w+") or die("file not opern");
+			$s = $name."\n";
+			fputs($file,$s) or die("Data not write");
+			fclose($file);
+			}
+			?>
+
+			<form action="#" method="post">
+			    Koment:<input type="text" name="name">
+			    <input type="submit" name="submit" value="Write to file">
+			</form>
 	</div>
 </section>
 
@@ -235,11 +250,22 @@ section#id9{
    width: 100%;
    background-color: black;
    color: white;
-   text-align: center;
+   display: inline-flex;
+
 }
-.footer p{
+.footer p {
    vertical-align: middle;
    line-height: 4em;
    padding-bottom: 0px;
+   flex: 1;
+}
+.footer input{
+	display: inline-flex;
+	padding: 10px;
+	margin-right: 20px;
+	margin-top: 20px;
+	border-radius: 8px;
+	flex: 2;
+
 }
 </style>
