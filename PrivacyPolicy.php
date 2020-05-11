@@ -107,7 +107,10 @@ function ndarja($text){
 		$text = "<p>If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please contact us on Sales@PracticeLeague.com</p>";
 		ndarja($text); ?>
 	</section>
-
+	
+	<div class="footer">
+	  <p>&copy Te drejtat e rezervuara</p>
+	</div>
 </section>
 
 
@@ -221,5 +224,22 @@ section#id1 h1{
 	line-height: 2;
 	padding: 20px;
 	font-size: 40px;
+}
+section#id9{
+	background-image: url("172802.jpg");
+	width: 100%;
+	height: 500px;
+	color: white;
+}
+.footer {
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+.footer p{
+   vertical-align: middle;
+   line-height: 4em;
+   padding-bottom: 0px;
 }
 </style>
