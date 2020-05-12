@@ -1,85 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Header</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-
-	<ul>
-		<li class="ura o"><i class="fa fa-apple" style="font-size:35px;color:white"></i></li>
-		<li class="ura i q"><a href="#">Home</a></li>
-		<li class="ura i k"><a href="#">Protfolio</a></li>
-		<li class="ura i k"><a href="#">About me</a></li>
-		<li class="ura i k"><a href="#">Contact</a></li>
-		<li class="uran i c"><a href="signup.php" class="header-signup">Signup</a></li>
-		<li class="uran i c login"><button type="submit" name="login-submit">Login</button></li>
-		<li class="uran i c"><input type="password" name="pwd" placeholder="Password..."></li>
-		<li class="uran i c"><input type="text" name="mailuid" placeholder="Username/E-mail..."></li>
-	</ul>
-</body>
-</html>
-<style type="text/css">
-	*{
-		margin: 0;
-		padding: 0;
-	}
-	ul{
-		background-color: black;
-		color: white;
-		width: 100%;
-		padding-top: 10px;
-		height: 50px;
-
-	}
-	ul, li{
-		display: inline-block;
-	}
-	li{
-		padding: 5px;
-	}
-	a{
-		color: white;
-		text-decoration-line: none;
-	}
-	a:hover{
-		color: red;
-	}
-	.uran{
-		float: right;
-		padding-top: 5px;
-	}
-	.ura{
-		float: left;
-	}
-	.i{
-		line-height: 2;
-	}
-	.q{
-		padding-left: 50px;
-	}
-	.o{
-		padding-left: 20px;
-	}
-	.k{
-		padding-left: 20px;
-	}
-	.c{
-		padding-right: 15px;
-	}
-	.login button{
-		display: inline-block;
-		background-color: red;
-		color: white;
-		width: 55px;
-		border:1px solid white;
-		height: 30px;
-		border-radius: 5px;
-	}
-	.c input{
-		background-color: white;
-		color: black;
-		border-radius: 5px;
-		height: 25px;
-	}
-</style>
+	<footer>
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-6 col-xs-12 segment-one md-mb-30 sm-mb-30">
+							<h2>Contact Info</h2>
+							<p>Email: lirim.islami252@gmail.com</p>
+							<p>Phone: +38344243908</p>
+							<p>Address: Viti</p>
+							<p>Faculty: FIEK</p>
+							
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12 segment-two md-mb-30 sm-mb-30">
+							<h2>Macbook</h2>
+							<ul>
+								<li><a href="https://www.macrumors.com/review/13-inch-macbook-pro-2020/">Pro 2020</a></li>
+								<li><a href="https://www.theverge.com/2018/11/6/18064552/macbook-air-2018-review-retina-keyboard-apple-features-battery-price">Air 2018</a></li>
+								<li><a href="https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i7-2.4-15-early-2013-retina-display-specs.html">Early 2013</a></li>
+								<li><a href="https://en.wikipedia.org/wiki/MacBook_(2006%E2%80%932012)">PowerBook 2011</a></li>
+								<li><a href="https://dbrand.com/macbook-skins">Pro Scin 2019</a></li>
+							</ul>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12 segment-three sm-mb-30">
+							<h2>Follow us</h2>
+							<p>Please follow us in our social media to keep more in contac with us</p>
+							<a href="#"><i class="fa fa-facebook"></i></a>	
+							<a href="#"><i class="fa fa-instagram"></i></a>	
+							<a href="#"><i class="fa fa-twitter"></i></a>	
+							<a href="#"><i class="fa fa-linkedin"></i></a>		
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12 segment-four sm-mb-30">
+							<h2>Youtube</h2>
+							<p>Check Video proof of this webpage for unlocking on my channel</p>
+							<form action="">
+								<br>
+								<input type="submit" value="Redirect">								
+							</form>
+						
+						</div> 
+					</div>
+				</div>
+			</div>
+			<p class="footer-bottom-text">All Right Reserved  &copy;PHP-2020</p>
+		</footer>
