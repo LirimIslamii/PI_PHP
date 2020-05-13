@@ -4,11 +4,11 @@
 			</div>
 			<nav>
 				<ul class="nav-links">
-					<li><a class="nav-link" href="#">iCloud Unlock</a></li>
-					<li><a class="nav-link" href="#">IMEI Check</a></li>
-					<li><a class="nav-link" href="#">SIM Unlock</a></li>
-					<li><a class="nav-link" href="#">PriceList</a></li>
-					<li><a class="nav-link" href="#">Register</a></li>
+					<li><a class="nav-link" href="index.php">iCloud Unlock</a></li>
+					<li><a class="nav-link" href="sim.php">IMEI Check</a></li>
+					<li><a class="nav-link" href="order.php">SIM Unlock</a></li>
+					<li><a class="nav-link" href="pricelist.php">PriceList</a></li>
+					<li><a class="nav-link" href="register.php">Register</a></li>
 				</ul>
 			</nav>
 			
