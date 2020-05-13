@@ -9,6 +9,7 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
  <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>" />
+   <link rel="stylesheet" href="style_n.css?v=<?php echo time(); ?>" />
 
     <title>iCloud Activation Lock Removal</title>
 	</head>
@@ -38,7 +39,7 @@
 						    </select></br>
 						    <p>Your iPhone IMEI</p></br>
 						    <input type="text" id="IMEI" name="IMEI" /></br>
-						    <button class="unlock"><i class="fa fa-apple"></i>Unlock</button>
+						    <button class="unlock" onclick="req()"><i class="fa fa-apple"></i>Unlock</button>
 						</div>
 				</div>
 				
@@ -72,16 +73,16 @@
 			<p style="margin-left:570px;">device as normal</p>
 			<button class="unlock_1"><i class="fa fa-apple" style="color:white;"></i>Unlock</button>
 			<div class="fix">
-				<img src="images/clock.svg" id="" />
+				<img src="images/clock.svg" alt="" />
 				<p><b>24 hours unlock delivery</b><br> Instant unlocking for many<br> mobile networks.</p>
 			</div>
 			<div class="fix_1">
-				<img src="images/gear.svg" id="" />
+				<img src="images/gear.svg" alt="" />
 				<p><b>Highly Skilled Tech Team</b><br> Experienced and certified in all Apple® products.</p>
 			</div>
 			<div class="fix_2">
-				<img src="images/iphonee.svg" id="" />
-				<p><b>Your iPhone is safe</b><br> You keep your device<br>throughout the entire process.</p>
+				<img src="images/iphonee.svg" alt="" />
+				<p><b>Your iPhone is more safe</b><br> You keep your device<br>throughout the entire process.</p>
 			</div>
 		</div>
 		<img src="images/icloud.jpg" alt="" width="100px" style="margin-left:48%"/>
@@ -102,7 +103,7 @@
 			<span class="fa fa-star fa-2x checked"></span>
 			<span class="fa fa-star fa-2x checked"></span>
             <span class="fa fa-star fa-2x "></span>
-            <h4> Rinor Mehmeti </h4>
+            <h4 style="margin-left:6px;"> Rinor Mehmeti </h4>
             <p>I had my doubts at first but everything went smoothly . Would recommend to anybody, only took 3 days to remove the iCloud lock and allow me to access the phone as normal, and customer service kept me informed - will be using them again thank you.</p>
  		</div>
  		<hr width="90%" style="margin-left:60px;margin-top:50px;">
@@ -118,5 +119,10 @@
 		<?php
 			require('footer.php');
 		?>
+		<script type="text/javascript">
+				function req(){
+					alert("You are not Sign In!");
+				}
+		</script>
 	</body>
 </html>
