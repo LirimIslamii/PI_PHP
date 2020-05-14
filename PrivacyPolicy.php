@@ -108,6 +108,18 @@ function ndarja($text){
 		ndarja($text); ?>
 	</section>
 	
+	<section id="id8">
+		<?php titulli("websites");
+		$text = "<p>Cookiebot helps make your use of cookies and online tracking GDPR and ePR compliant. The General Data Protection Regulation (GDPR) and the ePrivacy Directive (ePR) affect how your website may use cookies to track your visitors from the EU.</p>";
+		ndarja($text); ?>
+	</section>
+
+	<section id="id9">
+		<?php upper("What is personal data?");
+		$text = "<p>Personal data is information that can identify an individual, either directly or when combined with other data.</p>";
+		ndarja($text); ?>
+	</section>
+	
 	<div class="footer">
 	  <p>&copy Te drejtat e rezervuara</p>
 	  <?php 
