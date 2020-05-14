@@ -175,20 +175,20 @@ body, html {
 .footer p {
    vertical-align: middle;
    line-height: 4em;
-   padding-bottom: 0px;
-   margin-bottom: 0px;
+   padding-bottom: 10px;
+   margin-bottom: 10px;
    flex: 1;
    text-align:left;
-   font-size: 20px;
-   margin-left: 40px;
-   margin-top: 4px;
+   font-size: 14px;
+   margin-left: 41px;
+   margin-top: 5px;
 }
 .footer input{
 	display: inline-flex;
 	padding: 10px;
 	margin-right: 20px;
 	margin-top: 22px;
-	border-radius: 8px;
+	border-radius: 18px;
 	margin-bottom: 10px;
 	flex: 2;
 
