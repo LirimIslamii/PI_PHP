@@ -1,0 +1,25 @@
+.modal {
+  display: flex;
+  color:black;
+  font-weight: bold;
+  height:220px;
+}
+.modal p{
+  margin-top: 30px;
+}
+.modal input[type=email]{
+  margin-top:30px;
+  width:70%;
+  margin-left:30px;
+}
+.modal button {
+  margin-left:340px;
+  margin-top:-34px;
+}
+.modal button:focus {
+    outline:none;
+}
+.modal a {
+  margin-top:10px;
+  margin-right:10px;
+}
