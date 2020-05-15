@@ -1,0 +1,83 @@
+.pricelist {	
+	width:100%;
+	height:600px;
+}
+.price {
+	width:100%;
+	height:45px;
+}
+.price p{
+	margin-left:100px;
+	margin-top:18px;
+	color:black;
+	font-weight:bold; 
+	font-size:30px;
+}
+.price p:nth-child(2){
+	font-size:15px;
+	margin-left:900px;
+	margin-top:-45px;
+}
+
+
+.pricelist p{
+	color:#000000;
+	font-size:50px;
+	font-family:italic;
+	margin-left:40%;
+	margin-top:50px;
+}
+.list {
+	max-width:950px;
+	height:300px;
+	background:white;
+	border-radius:10px;
+	border:1px solid white;
+	color:#fff;
+	top:50%;
+	left:50%;
+	margin-top:80px;
+	margin-left: 160px; 
+	box-sizing:border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	padding: 30px 50px;
+}
+.list p{
+	font-size:20px;
+	margin-left:-1px;
+	margin-top:10px;
+}
+.list #pricelist{
+	width:100%;
+	height:40px;
+	color:black;
+	font-size: 16px;
+	margin-top:10px;
+	border-radius:7px;
+	border-bottom:2px solid lightgrey;
+	box-sizing:border-box;
+
+}
+.list input:focus{
+	outline:none;
+}
+.list .btn_2{
+	margin: 10px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 15px;
+    padding: 15px;
+    color:white;
+    text-align: center;
+    margin-top:18px;
+	background: -moz-linear-gradient(top, #696969 20%, #000000 50%, #C59237 100%);
+	background: -webkit-linear-gradient(top, #696969 20%, #000000 50%, #C59237 100%);
+    background-size: 100%;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    width: 180px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    cursor: pointer;
+    border-radius: 25px;
+}
+.list .btn_2:focus{
+	outline:none;
+}
