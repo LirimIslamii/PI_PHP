@@ -6,43 +6,56 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />  
  <link rel="shortcut icon" href="images/favicon.ico">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="js/main.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
  <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>" />
-   <link rel="stylesheet" href="style_n.css?v=<?php echo time(); ?>" />
+ <link rel="stylesheet" href="animation.css?v=<?php echo time(); ?>" />
+ <link rel="stylesheet" href="jquery.modal.css" />
 
     <title>iCloud Activation Lock Removal</title>
+    <script>
+		var _gaq=[['_setAccount','UA-2508361-11'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
 	</head>
 	<body>
 	<?php
 		require('header.php');
 	?>
+</script>
 			<section class="presentation">
 				<div class="introduction">
 					<div class="intro-text">
 						<h1>iCloud® Activation Lock™ Removal</h1>
 					</div>
+					<form id="unlocking" required>
 						<div class="intro">
-						    <p>Select your iPhone model </label></br>	
-						    <select id="iPhone" style="color:black;">
-						    	<option value="">Select iPhone</option>
-						    	<option value="SE_new">iPhone SE</option>
-						    	<option value="XSM">iPhone XS Max</option>
-						    	<option value="XS">iPhone XS</option>
-						    	<option value="8/8+">iPhone 8/8+</option>
-						    	<option value="7/7+">iPhone 7/7+</option>
-						    	<option value="">iPhone 6S/6S+</option>
-						    	<option value="6/6+">iPhone 6/6+</option>
-						    	<option value="SE">iPhone SE</option>
-						    	<option value="5S/5C/5">iPhone 5S/5C/5</option>
-						    	<option value="4S/4">iPhone 4S/4</option>
+						    <p> Select your iPhone model </label></br>	
+						    <select id="iPhone" name="iPhone" style="color:black;">
+						    	<option selected disabled>Select iPhone</option>
+						    	<option name="SE_new">iPhone SE</option>
+						    	<option name="XSM">iPhone XS Max</option>
+						    	<option name="XS">iPhone XS</option>
+						    	<option name="8/8+">iPhone 8/8+</option>
+						    	<option name="7/7+">iPhone 7/7+</option>
+						    	<option name="">iPhone 6S/6S+</option>
+						    	<option name="6/6+">iPhone 6/6+</option>
+						    	<option name="SE">iPhone SE</option>
+						    	<option name="5S/5C/5">iPhone 5S/5C/5</option>
+						    	<option name="4S/4">iPhone 4S/4</option>
 						    </select></br>
-						    <p>Your iPhone IMEI</p></br>
-						    <input type="text" id="IMEI" name="IMEI" /></br>
-						    <button class="unlock" onclick="req()"><i class="fa fa-apple"></i>Unlock</button>
+						 <p>Your iPhone IMEI</p></br>
+						 <input type="text" id="IMEI" name="imei" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g);" maxlength="15" /></br>
+						 <p id="err" style="color:red;"></p>
+						<button id="btn" onclick="validate()"><i class="fa fa-apple"></i>Unlock</button>
 						</div>
+					</form>
 				</div>
-				
+
 				<div class="cover">
 					<img src="images/lock.jpg" alt="iPhone" />
 				</div>
@@ -71,7 +84,7 @@
 			<p>The Activation Lock is permanently removed and the device is removed from as normal.<br>
 			the previous owners iCloud account allowing you to activate and set up the<br></p>
 			<p style="margin-left:570px;">device as normal</p>
-			<button class="unlock_1"><i class="fa fa-apple" style="color:white;"></i>Unlock</button>
+			<button class="unlock_1" onclick="Scroll()"><i class="fa fa-apple" style="color:white;"></i>Unlock</button>
 			<div class="fix">
 				<img src="images/clock.svg" alt="" />
 				<p><b>24 hours unlock delivery</b><br> Instant unlocking for many<br> mobile networks.</p>
@@ -119,10 +132,24 @@
 		<?php
 			require('footer.php');
 		?>
-		<script type="text/javascript">
-				function req(){
-					alert("You are not Sign In!");
-				}
+		<div class="modal">
+			<p>Enter Your Email to Receive All Informations. <br>If it doesn't work successfully don't worry, we will use another encryption.</p>
+			<a rel="modal:close"></a>
+			<input type="email" class="form-control" id="email" placeholder="Your Email" name="email" />
+			<button id="btn_1" class="btn btn-primary">Send</button>
+		</div>
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.modal.min.js"></script>
+		<script src="js/validation.js"></script>
+		
 		</script>
 	</body>
 </html>
+
+
+
+
+
+
+
+
