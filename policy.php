@@ -1,23 +1,25 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US" dir="ltr">
+
+
 <head>
-	<title>Privacy Policy</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="C:\Users\Uran\Desktop\New folder\Privacy Policy.css">
-</head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=Edge" />  
+ <link rel="shortcut icon" href="images/favicon.ico">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="js/main.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>" />
+ <link rel="stylesheet" href="animation.css?v=<?php echo time(); ?>" />
+
+    <title>iCloud Activation Lock Removal</title>
+	</head>
 <body>
-	<ul>
-		<li class="ura o"><i class="fa fa-apple" style="font-size:35px;color:white"></i></li>
-		<li class="ura i q"><a href="#">Home</a></li>
-		<li class="ura i k"><a href="#">Protfolio</a></li>
-		<li class="ura i k"><a href="#">About me</a></li>
-		<li class="ura i k"><a href="#">Contact</a></li>
-		<li class="uran i c"><a href="signup.php" class="header-signup">Signup</a></li>
-		<li class="uran i c login"><button type="submit" name="login-submit">Login</button></li>
-		<li class="uran i c"><input type="password" name="pwd" placeholder="Password..."></li>
-		<li class="uran i c"><input type="text" name="mailuid" placeholder="Username/E-mail..."></li>
-	</ul>
+	<?php
+		require('header.php');
+	?>
 
 <div class="hero-image">
   <div class="hero-text">
@@ -119,27 +121,10 @@ function ndarja($text){
 		$text = "<p>Personal data is information that can identify an individual, either directly or when combined with other data.</p>";
 		ndarja($text); ?>
 	</section>
-	
-	<div class="footer">
-	  <p>&copy Te drejtat e rezervuara</p>
-	  <?php 
-			if(isset($_POST['submit']))
-			{
-			$name = $_POST['name'];
-			$file = fopen("Koment.txt", "w+") or die("file not opern");
-			$s = $name."\n";
-			fputs($file,$s) or die("Data not write");
-			fclose($file);
-			}
-			?>
-
-			<form action="#" method="post">
-			    Koment:<input type="text" name="name">
-			    <input type="submit" name="submit" value="Write to file">
-			</form>
-	</div>
 </section>
-
+<?php
+	require("footer.php");
+?>
 
 </body>
 </html>
@@ -149,80 +134,14 @@ function ndarja($text){
 		margin: 0;
 		padding: 0;
 }
-	ul{
-		background-color: black;
-		color: white;
-		width: 100%;
-		padding-top: 10px;
-		height: 55px;
-	}
-	ul, li{
-		display: inline-block;
-	}
-	li{
-		padding: 5px;
-	}
-	a{
-		color: white;
-		text-decoration-line: none;
-	}
-	a:hover{
-		color: red;
-	}
-	.uran{
-		float: right;
-		padding-top: 5px;
-	}
-	.ura{
-		float: left;
-	}
-	.i{
-		line-height: 2;
-	}
-	.q{
-		padding-left: 50px;
-	}
-	.o{
-		padding-left: 20px;
-	}
-	.k{
-		padding-left: 20px;
-	}
-	.c{
-		padding-right: 15px;
-	}
-	.login button{
-		display: inline-block;
-		background-color: red;
-		color: white;
-		width: 55px;
-		border:1px solid white;
-		height: 30px;
-		border-radius: 5px;
-	}
-	.login button:hover{
-		display: inline-block;
-		background-color: white;
-		color: red;
-		width: 55px;
-		border:1px solid red;
-		height: 30px;
-		border-radius: 5px;
-	}
-	.c input{
-		background-color: white;
-		color: black;
-		border-radius: 5px;
-		height: 25px;
-	}
-
+	
 body, html {
   height: 100%;
   margin: 0;
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("privacy.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/privacy.jpg");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -252,8 +171,8 @@ section#id1 h1{
 	padding: 20px;
 	font-size: 40px;
 }
-section#id9{
-	background-image: url("172802.jpg");
+section #id9{
+	background-image: url("images/foto2.jpg");
 	width: 100%;
 	height: 500px;
 	color: white;
