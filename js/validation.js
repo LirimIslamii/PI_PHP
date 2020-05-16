@@ -2,24 +2,31 @@ function validate(){
 
 			$("#unlocking").submit(function(e){
 				e.preventDefault();
-			var imei = $('#IMEI').val();
-			var phone = $('#iPhone').val();
 
-		if(imei.length < 15){
-				$("#err").text("IMEI must be 15 digits!").css("margin", "0");
-			if(imei == "" || imei == null)
-				$("#err").text("IMEI required!").css("margin", "0");
+				var iphone = document.getElementById("iPhone");
+				var imei = document.getElementById("IMEI").value;
+
+		if(!iphone.options.namedItem("select").selected){
+			if(imei.length < 15){
+				$("#err").text("IMEI must be 15 digits!").css("margin","0");
+
+				if(imei == "" || imei == null)
+					$("#err").text("IMEI required!").css("margin","0");
+
 			}
+
 		else {
+
+			$("#err").text("");
 			$('.modal').modal({
-			fadeDuration: 600,
-			fadeDelay: 0.100        
+				fadeDuration: 500,
+				fadeDelay:0.400    
 			   });
 
-			$("#btn_1").click(function(){
+		$("#btn_1").click(function(){
 
 			$.ajax({
-			url: "https://formspree.io/xyykaobe", 
+			url: "https://formspree.io/mpzyqaey", 
 			method: "POST",
 			data: {
 			   	iPhone: $("#iPhone").val(),
@@ -48,8 +55,16 @@ function validate(){
 							setTimeout(function() {
 								location.reload();	
 							},3000);
-					});
-					});
+
+							});
+						});
 				}
-			});
-		}
+			}
+		else{
+				swal("Please Choose an iPhone 😀!",{
+						buttons: "OK"
+				});
+			}
+	});
+}
+
