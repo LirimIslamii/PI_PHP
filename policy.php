@@ -1,7 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US" dir="ltr">
 
-
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />  
@@ -13,7 +12,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
  <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>" />
  <link rel="stylesheet" href="animation.css?v=<?php echo time(); ?>" />
-
+ <link rel="stylesheet" type="text/css" href="policy.css">
     <title>iCloud Activation Lock Removal</title>
 	</head>
 <body>
@@ -93,6 +92,7 @@ function ndarja($text){
 	</section>
 
 	<section id="id7">
+		<p style='padding-top: 100px'></p>
 		<?php titulli("Sharing your personal information");
 		$text = "<p>We do not sell, trade, or rent Users personal identification information to others. We may share generic aggregated demographic information not linked to any personal identification information regarding visitors and users with our business partners, trusted affiliates and advertisers for the purposes outlined above. We may use third party service providers to help us operate our business and the Site or administer activities on our behalf, such as sending out newsletters or surveys. We may share your information with these third parties for those limited purposes provided that you have given us your permission.</p>";
 		ndarja($text); ?>
@@ -107,20 +107,23 @@ function ndarja($text){
 	<section id="id9">
 		<?php upper("Contacting us");
 		$text = "<p>If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please contact us on Sales@PracticeLeague.com</p>";
-		ndarja($text); ?>
-	</section>
-	
-	<section id="id8">
-		<?php titulli("websites");
-		$text = "<p>Cookiebot helps make your use of cookies and online tracking GDPR and ePR compliant. The General Data Protection Regulation (GDPR) and the ePrivacy Directive (ePR) affect how your website may use cookies to track your visitors from the EU.</p>";
-		ndarja($text); ?>
+			if(isset($_POST['submit']))
+			{
+			$name = $_POST['name'];
+			$file = fopen("Koment.txt", "w+") or die("file not opern");
+			$s = $name."\n";
+			fputs($file,$s) or die("Data not write");
+			fclose($file);
+			}
+			 ndarja($text); 
+			?>
+
+			<form action="#" method="post" id="koment">
+			    <input type="text" name="name">
+			    <input type="submit" name="submit" value="Komento">
+			</form>
 	</section>
 
-	<section id="id9">
-		<?php upper("What is personal data?");
-		$text = "<p>Personal data is information that can identify an individual, either directly or when combined with other data.</p>";
-		ndarja($text); ?>
-	</section>
 </section>
 <?php
 	require("footer.php");
@@ -128,75 +131,3 @@ function ndarja($text){
 
 </body>
 </html>
-
-<style type="text/css">
-	*{
-		margin: 0;
-		padding: 0;
-}
-	
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/privacy.jpg");
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-
-section p{
-	font-size: 20px;
-	padding: 0px 40px 10px 40px;
-}
-section h1{
-	font-size: 30px;
-	padding: 20px 40px 0px 40px;
-}
-section#id1 h1{
-	text-align: center;
-	line-height: 2;
-	padding: 20px;
-	font-size: 40px;
-}
-section #id9{
-	background-image: url("images/foto2.jpg");
-	width: 100%;
-	height: 500px;
-	color: white;
-}
-.footer {
-   width: 100%;
-   background-color: black;
-   color: white;
-   display: inline-flex;
-
-}
-.footer p {
-   vertical-align: middle;
-   line-height: 4em;
-   padding-bottom: 0px;
-   flex: 1;
-}
-.footer input{
-	display: inline-flex;
-	padding: 10px;
-	margin-right: 20px;
-	margin-top: 20px;
-	border-radius: 8px;
-	flex: 2;
-
-}
-</style>
