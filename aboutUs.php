@@ -13,6 +13,7 @@
  <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>" />
  <link rel="stylesheet" href="animation.css?v=<?php echo time(); ?>" />
 <link rel="stylesheet" type="text/css" href="aboutUs.css">
+<script type="text/javascript" src="js/aboutUs.js"></script>
     <title>iCloud Activation Lock Removal</title>
   </head>
 <body>
@@ -53,6 +54,7 @@ class Person{
 		return $this->email;
 	}
 }
+
 class TeDhenat extends Person{
 	public $profesioni;
 	public $vendi;
@@ -115,7 +117,7 @@ $personi3 = new TeDhenat("Rinor","Mehmeti","rinormehemti7@hotmail.com","Programe
         <p class="title"><?php echo $personi3->getProfesioni(); ?></p>
         <p><?php echo $personi3->getVendi(); ?><p>
         <p><?php echo $personi3->getEmail(); ?></p>
-        <p><button class="button rinor">Contact <?php inicialet("Rinor","Mehmeti") ?></button></p>
+        <p><button class="button rinor" onclick="RinroMehmeti()">Contact <?php inicialet("Rinor","Mehmeti") ?></button></p>
       </div>
     </div>
   </div>
@@ -128,7 +130,7 @@ $personi3 = new TeDhenat("Rinor","Mehmeti","rinormehemti7@hotmail.com","Programe
         <p class="title"><?php echo $personi2->getProfesioni(); ?></p>
         <p><?php echo $personi2->getVendi(); ?><p>
         <?php echo $personi2->getEmail(); ?>
-        <p><button class="button lirim">Contact <?php inicialet("Lirim","Islami") ?></button></p>
+        <p><button class="button lirim" onclick="LirimIslami()">Contact <?php inicialet("Lirim","Islami") ?></button></p>
       </div>
     </div>
   </div>
@@ -141,11 +143,73 @@ $personi3 = new TeDhenat("Rinor","Mehmeti","rinormehemti7@hotmail.com","Programe
         <p class="title"><?php echo $personi1->getProfesioni(); ?></p>
         <p><?php echo $personi1->getVendi(); ?><p>
         <?php echo $personi1->getEmail(); ?>
-        <p><button class="button uran">Contact <?php inicialet("Uran","Lajqi") ?></button></p>
+        <p><button class="button uran" onclick="UranLajqi()">Contact <?php inicialet("Uran","Lajqi") ?></button></p>
       </div>
     </div>
   </div>
 </div>
+
+<?php 
+  if(isset($_POST['submit'])){
+    $firstname = htmlentities($_POST['firstname']);
+    $lastname = htmlentities($_POST['lastname']);
+    $email = htmlentities($_POST['email']);
+
+    setcookie('lastname', $firstname, time() + 3600);
+    setcookie('firstname', $lastname, time() + 3600);
+    setcookie('email', $email, time() + 3600);
+
+    header('Location: users.php');
+  }
+?>
+
+<div class="row">
+  <div class="column"  id="rinor" style="display: none;">
+    <div class="card">
+      <div class="container">
+            <h3>Contact <?php echo $personi3->getEmri(); ?></h3>
+            <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="forma">
+              <input type="text" name="firstname" placeholder="Firstname"><br>
+              <input type="text" name="lastname" placeholder="Lastname"><br>
+              <input type="email" name="email" placeholder="Email"><br>
+              <input type="number" name="mosha" placeholder="Mosha"><br>
+              <input type="submit" name="submit" value="Submit">
+            </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="column"  id="lirim" style="display: none;">
+    <div class="card">
+      <div class="container">
+            <h3>Contact <?php echo $personi2->getEmri(); ?></h3>
+             <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="forma">
+              <input type="text" name="firstname" placeholder="Firstname"><br>
+              <input type="text" name="lastname" placeholder="Lastname"><br>
+              <input type="email" name="email" placeholder="Email"><br>
+              <input type="number" name="mosha" placeholder="Mosha"><br>
+              <input type="submit" name="submit" value="Submit">
+            </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="column"  id="uran" style="display: none;">
+    <div class="card">
+      <div class="container">
+            <h3>Contact <?php echo $personi1->getEmri(); ?></h3>
+             <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="forma">
+              <input type="text" name="firstname" placeholder="Firstname"><br>
+              <input type="text" name="lastname" placeholder="Lastname"><br>
+              <input type="email" name="email" placeholder="Email"><br>
+              <input type="number" name="mosha" placeholder="Mosha"><br>
+              <input type="submit" name="submit" value="Submit">
+            </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <?php
   require("footer.php");
