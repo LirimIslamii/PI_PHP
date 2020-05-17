@@ -12,7 +12,8 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
  <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>" />
  <link rel="stylesheet" href="animation.css?v=<?php echo time(); ?>" />
-<link rel="stylesheet" type="text/css" href="aboutUs.css">
+<link rel="stylesheet" type="text/css" href="aboutUs.css?v=<?php echo time(); ?>
+">
 <script type="text/javascript" src="js/aboutUs.js"></script>
     <title>iCloud Activation Lock Removal</title>
   </head>
@@ -111,20 +112,20 @@ $personi3 = new TeDhenat("Rinor","Mehmeti","rinormehemti7@hotmail.com","Programe
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="images/5.png" alt="John" style="width:100%;height: 300px;">
+      <img src="images/rinor.jpg" alt="John" style="width:80%;height: 300px;margin-left: 10%;">
       <div class="container">
       <?php emriMbiemri("Rinor","Mehmeti"); ?>
         <p class="title"><?php echo $personi3->getProfesioni(); ?></p>
         <p><?php echo $personi3->getVendi(); ?><p>
         <p><?php echo $personi3->getEmail(); ?></p>
-        <p><button class="button rinor" onclick="RinroMehmeti()">Contact <?php inicialet("Rinor","Mehmeti") ?></button></p>
+        <p><button class="button rinor" onclick="RinorMehmeti()">Contact <?php inicialet("Rinor","Mehmeti") ?></button></p>
       </div>
     </div>
   </div>
 
   <div class="column">
     <div class="card">
-      <img src="images/5.png" alt="John" style="width:100%;height: 300px;">
+      <img src="images/lirim.jpg" alt="John" style="width:80%;height: 300px;margin-left: 10%;">
       <div class="container">
       <?php emriMbiemri("Lirim","Islami"); ?>
         <p class="title"><?php echo $personi2->getProfesioni(); ?></p>
@@ -137,7 +138,7 @@ $personi3 = new TeDhenat("Rinor","Mehmeti","rinormehemti7@hotmail.com","Programe
   
   <div class="column">
     <div class="card">
-      <img src="images/5.png" alt="John" style="width:100%;height: 300px;">
+      <img src="images/uran.jpg" alt="John" style="width:80%;height: 300px;margin-left: 10%;">
       <div class="container">
       	<?php emriMbiemri("Uran","Lajqi"); ?>
         <p class="title"><?php echo $personi1->getProfesioni(); ?></p>
