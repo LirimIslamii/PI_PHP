@@ -21,63 +21,63 @@
   <?php
     require('header.php');
   ?>
-	<?php 
+  <?php 
 class Person{
-	public $emri;
-	public $mbiemri;
-	public $email;
+  public $emri;
+  public $mbiemri;
+  public $email;
 
-	public function __construct($emri,$mbiemri,$email){
-		$this->emri = $emri;
-		$this->mbiemri = $mbiemri;
-		$this->email = $email;
-		__CLASS__." u krijua.<br>";
-	}
-	public function __destruct(){
-		__CLASS__." u shkatrrua.<br>";
-	}
-	public function setEmri($name){
-		$this->emri = $emri; 
-	}
-	public function getEmri(){
-		return $this->emri;
-	}
-	public function setMbiemri($name){
-		$this->mbiemri = $mbiemri;
-	}
-	public function getMbiemri(){
-		return $this->mbiemri;
-	}
-	public function setEmail($name){
-		$this->email = $email;
-	}
-	public function getEmail(){
-		return $this->email;
-	}
+  public function __construct($emri,$mbiemri,$email){
+    $this->emri = $emri;
+    $this->mbiemri = $mbiemri;
+    $this->email = $email;
+    __CLASS__." u krijua.<br>";
+  }
+  public function __destruct(){
+    __CLASS__." u shkatrrua.<br>";
+  }
+  public function setEmri($name){
+    $this->emri = $emri; 
+  }
+  public function getEmri(){
+    return $this->emri;
+  }
+  public function setMbiemri($name){
+    $this->mbiemri = $mbiemri;
+  }
+  public function getMbiemri(){
+    return $this->mbiemri;
+  }
+  public function setEmail($name){
+    $this->email = $email;
+  }
+  public function getEmail(){
+    return $this->email;
+  }
 }
 
 class TeDhenat extends Person{
-	public $profesioni;
-	public $vendi;
+  public $profesioni;
+  public $vendi;
 
-	public function __construct($emri,$mbiemri,$email,$profesioni,$vendi){
-		parent::__construct($emri,$mbiemri,$email);
-		$this->profesioni = $profesioni;
-		$this->vendi = $vendi;
-		__CLASS__." u krijua.<br>";
-	}
-	public function setProfesioni($profesioni){
-		$this->profesioni = $profesioni; 
-	}
-	public function getProfesioni(){
-		return $this->profesioni;
-	}
-	public function setVendi($vendi){
-		$this->vendi = $vendi;
-	}
-	public function getVendi(){
-		return $this->vendi;
-	}
+  public function __construct($emri,$mbiemri,$email,$profesioni,$vendi){
+    parent::__construct($emri,$mbiemri,$email);
+    $this->profesioni = $profesioni;
+    $this->vendi = $vendi;
+    __CLASS__." u krijua.<br>";
+  }
+  public function setProfesioni($profesioni){
+    $this->profesioni = $profesioni; 
+  }
+  public function getProfesioni(){
+    return $this->profesioni;
+  }
+  public function setVendi($vendi){
+    $this->vendi = $vendi;
+  }
+  public function getVendi(){
+    return $this->vendi;
+  }
 }
 
 $personi1 = new TeDhenat("Uran","Lajqi","uran_lajqi_1@outlook.com","Administrues i te dhenave","Peje");
@@ -87,26 +87,26 @@ $personi3 = new TeDhenat("Rinor","Mehmeti","rinormehemti7@hotmail.com","Programe
 ?>
 <div class="hero-image">
   <div class="hero-text">
-  	<h1>Per qka qendrojm ne</h1>
-  	<?php 
-  	$text = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit.</p>";
-  	$newtext = wordwrap($text, 50, "<br />\n");
-  	echo $newtext; ?>
+    <h1>Per qka qendrojm ne</h1>
+    <?php 
+    $text = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit.</p>";
+    $newtext = wordwrap($text, 50, "<br />\n");
+    echo $newtext; ?>
   </div>
 </div>
 
 <?php 
-	function emriMbiemri($emri,$mbiemri){
-		echo "<h2>$emri $mbiemri</h2>";
-	}
-	function inicialet($emri, $mbiemri){
-		$emri = substr($emri, 0, 1); 
+  function emriMbiemri($emri,$mbiemri){
+    echo "<h2>$emri $mbiemri</h2>";
+  }
+  function inicialet($emri, $mbiemri){
+    $emri = substr($emri, 0, 1); 
         $mbiemri = substr($mbiemri, 0, 1);
         echo "$emri. $mbiemri.";
-	}
+  }
 ?>
 
 <div class="row">
@@ -140,7 +140,7 @@ $personi3 = new TeDhenat("Rinor","Mehmeti","rinormehemti7@hotmail.com","Programe
     <div class="card">
       <img src="images/uran.jpg" alt="John" style="width:80%;height: 300px;margin-left: 10%;">
       <div class="container">
-      	<?php emriMbiemri("Uran","Lajqi"); ?>
+        <?php emriMbiemri("Uran","Lajqi"); ?>
         <p class="title"><?php echo $personi1->getProfesioni(); ?></p>
         <p><?php echo $personi1->getVendi(); ?><p>
         <?php echo $personi1->getEmail(); ?>
@@ -212,10 +212,58 @@ $personi3 = new TeDhenat("Rinor","Mehmeti","rinormehemti7@hotmail.com","Programe
 </div>
 
 
+
+
+
+<?php require('konekt.php'); 
+$query = 'SELECT * FROM sherbimet';
+$result = mysqli_query($conn, $query);
+$posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
+mysqli_free_result($result);
+?>
+<table>
+    <tr>
+    <th>ID</th>
+    <th>IMEI</th>
+    <th>Lloji</th>
+    <th>Koha</th>
+  </tr>
+<?php foreach ($posts as $post) {?>
+  <tr>
+    <td><?php echo $post['id']; ?></td>
+    <td><?php echo $post['imei']; ?></td>
+    <td><?php echo $post['lloji']; ?></td>
+    <td><?php echo $post['koha']; ?></td>
+  </tr>
+<?php } ?>
+ </table>
+
+
+
+
+
 <?php
   require("footer.php");
 ?>
-
-
 </body>
 </html>
+<style>
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
