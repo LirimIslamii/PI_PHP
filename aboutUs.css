@@ -152,31 +152,11 @@ body, html {
 
 .hero-text {
   position: absolute;
-  top: 40%;
-  left: 40%;
+  top: 50%;
+  left: 16%;
+  transform: translate(-50%, -50%);
   color: white;
 }
-.hero-text input {
-    padding:5px 5px;
-    border-bottom:1px solid #fff;
-    border-radius:5px;
-    color:black;
-}
-.hero-text input:focus {
-    outline:none;
-}
-.hero-text #weather{
-  background:black;
-    color:white;
-    margin-left:20px;
-    padding:5px 5px;
-    border:1px solid green;
-    border-radius:5px;
-}
-.hero-text #weather:focus {
-    outline:none;
-}
-
 .forma input{
   margin-left: 10px;
   padding: 5px;
@@ -186,4 +166,20 @@ body, html {
 .forma input[type=submit]{
   background-color: black;
   color: white;
+}
+.forma button,a{
+  padding: 5px;
+  width: 30%;
+  background-color: black;
+  margin: 5px;
+  text-decoration: none;
+  color: white;
+}
+.forma a:hover{
+  padding: 5px;
+  width: 30%;
+  background-color: black;
+  margin: 5px;
+  color: orange;
+  text-decoration: none;
 }
