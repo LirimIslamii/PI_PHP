@@ -152,10 +152,29 @@ body, html {
 
 .hero-text {
   position: absolute;
-  top: 50%;
-  left: 16%;
-  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 40%;
   color: white;
+}
+.hero-text input {
+    padding:5px 5px;
+    border-bottom:1px solid #fff;
+    border-radius:5px;
+    color:black;
+}
+.hero-text input:focus {
+    outline:none;
+}
+.hero-text #weather{
+  background:black;
+    color:white;
+    margin-left:20px;
+    padding:5px 5px;
+    border:1px solid green;
+    border-radius:5px;
+}
+.hero-text #weather:focus {
+    outline:none;
 }
 
 .forma input{
@@ -168,4 +187,3 @@ body, html {
   background-color: black;
   color: white;
 }
-
