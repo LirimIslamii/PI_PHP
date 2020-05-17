@@ -7,6 +7,8 @@
  <link rel="shortcut icon" href="images/favicon.ico">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <script src="js/main.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/webapikey.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -87,14 +89,9 @@ $personi3 = new TeDhenat("Rinor","Mehmeti","rinormehemti7@hotmail.com","Programe
 ?>
 <div class="hero-image">
   <div class="hero-text">
-    <h1>Per qka qendrojm ne</h1>
-    <?php 
-    $text = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit.</p>";
-    $newtext = wordwrap($text, 50, "<br />\n");
-    echo $newtext; ?>
+    <input type="text" id="text" name="text">
+    <button id="weather">Check Weather</button>
+    <div id="show_weather"></div>
   </div>
 </div>
 
