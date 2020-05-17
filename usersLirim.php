@@ -7,7 +7,7 @@
 			setcookie('koha', $koha, time() + 3600);
 			$koha = unserialize($_COOKIE['koha']);
 			echo '<p style="margin-top: 200px;">Useri '. $_COOKIE['firstname2'].' '.$_COOKIE['lastname2'].
-			 ' me emailin '.$_COOKIE['email2']. ' eshte regjistuar ne databaz.</p><br>';
+			 ' me emailin '.$_COOKIE['email2']. ' eshte ruajtur si cookie.</p><br>';
 			echo '<p>Koha e regjistrimit '. $koha['koh'] . '</p><br>';
 			echo '<p>Te dhenat tuaja do te ruhen ne browser per '. $koha['kohezgjatja'] . ' ore</p>';
 		}
