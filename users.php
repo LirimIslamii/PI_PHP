@@ -1,13 +1,13 @@
 <?php
-	if(isset($_COOKIE['firstname']) && isset($_COOKIE['lastname']) && isset($_COOKIE['email'])){
+	if(isset($_COOKIE['firstname1']) && isset($_COOKIE['lastname1']) && isset($_COOKIE['email1'])){
 		
 			$data = date('d/m/Y h:i:sa');
 			$koha = ['koh' => $data, 'kohezgjatja' => 2];
 			$koha = serialize($koha);
 			setcookie('koha', $koha, time() + 3600);
 			$koha = unserialize($_COOKIE['koha']);
-			echo '<p style="margin-top: 200px;">Useri '. $_COOKIE['firstname'].' '.$_COOKIE['lastname'].
-			 ' me emailin '.$_COOKIE['email']. ' eshte regjistuar ne databaz.</p><br>';
+			echo '<p style="margin-top: 200px;">Useri '. $_COOKIE['firstname1'].' '.$_COOKIE['lastname1'].
+			 ' me emailin '.$_COOKIE['email1']. ' eshte ruajtur si cookie.</p><br>';
 			echo '<p>Koha e regjistrimit '. $koha['koh'] . '</p><br>';
 			echo '<p>Te dhenat tuaja do te ruhen ne browser per '. $koha['kohezgjatja'] . ' ore</p>';
 		}
@@ -16,7 +16,6 @@
 		}
 ?>
 <style>
-	
 *{
 	background-color: black;
 	color: white;
@@ -26,6 +25,4 @@
 	text-align: center; 
 	margin:0;
 }
-
-
 </style>
