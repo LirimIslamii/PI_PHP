@@ -16,6 +16,59 @@
 ">
 <script type="text/javascript" src="js/aboutUs.js"></script>
     <title>iCloud Activation Lock Removal</title>
+    <?php
+      if(isset($_POST['submit1'])){
+        session_start();
+        $_SESSION['emri1'] = htmlentities($_POST['firstname1']);
+        $_SESSION['mbiemri1'] = htmlentities($_POST['lastname1']);
+        $_SESSION['email1'] = htmlentities($_POST['email1']);
+        $_SESSION['mosha1'] = htmlentities($_POST['mosha1']);
+      }
+
+      if(isset($_POST['submit2'])){
+        session_start();
+        $_SESSION['emri2'] = htmlentities($_POST['firstname2']);
+        $_SESSION['mbiemri2'] = htmlentities($_POST['lastname2']);
+        $_SESSION['email2'] = htmlentities($_POST['email2']);
+        $_SESSION['mosha2'] = htmlentities($_POST['mosha2']);
+      }
+
+      if(isset($_POST['submit3'])){
+        session_start();
+        $_SESSION['emri3'] = htmlentities($_POST['firstname3']);
+        $_SESSION['mbiemri3'] = htmlentities($_POST['lastname3']);
+        $_SESSION['email3'] = htmlentities($_POST['email3']);
+        $_SESSION['mosha3'] = htmlentities($_POST['mosha3']);
+      }
+
+      if(isset($_POST['submit2'])){
+          $firstname = htmlentities($_POST['firstname2']);
+          $lastname = htmlentities($_POST['lastname2']);
+          $email = htmlentities($_POST['email2']);
+
+          setcookie('firstname2', $firstname, time() + 3600);
+          setcookie('lastname2', $lastname, time() + 3600);
+          setcookie('email2', $email, time() + 3600);
+      }
+      if(isset($_POST['submit1'])){
+          $firstname = htmlentities($_POST['firstname1']);
+          $lastname = htmlentities($_POST['lastname1']);
+          $email = htmlentities($_POST['email1']);
+
+          setcookie('firstname1', $firstname, time() + 3600);
+          setcookie('lastname1', $lastname, time() + 3600);
+          setcookie('email1', $email, time() + 3600);
+      }
+      if(isset($_POST['submit3'])){
+          $firstname = htmlentities($_POST['firstname3']);
+          $lastname = htmlentities($_POST['lastname3']);
+          $email = htmlentities($_POST['email3']);
+
+          setcookie('firstname3', $firstname, time() + 3600);
+          setcookie('lastname3', $lastname, time() + 3600);
+          setcookie('email3', $email, time() + 3600);
+      }
+    ?>
   </head>
 <body>
   <?php
@@ -155,18 +208,6 @@ $personi3 = new TeDhenat("Rinor","Mehmeti","rinormehemti7@hotmail.com","Programe
 </div>
 
 <?php 
-  if(isset($_POST['submit1'])){
-    $firstname = htmlentities($_POST['firstname1']);
-    $lastname = htmlentities($_POST['lastname1']);
-    $email = htmlentities($_POST['email1']);
-
-    setcookie('firstname1', $firstname, time() + 3600);
-    setcookie('lastname1', $lastname, time() + 3600);
-    setcookie('email1', $email, time() + 3600);
-  }
-?>
-
-<?php 
 require('konekt.php');
 define('ROOT_URL1', 'users.php');
   if(isset($_POST['submit1'])){
@@ -187,16 +228,6 @@ define('ROOT_URL1', 'users.php');
       echo "<p>Ju lutem shenoni email valid</p>";
     }
     else{
-    function test_input($data) {
-      $data = trim($data);
-      $data = stripslashes($data);
-      $data = htmlspecialchars($data);
-      return $data;
-    }
-    $firstname1 = test_input($firstname1);
-    $lastname1 = test_input($lastname1);
-    $email1 = test_input($email1);
-    $mosha1 = test_input($mosha1);
 
     $query1 = "INSERT INTO kontaktrinor(firstname1,lastname1,email1,mosha1) VALUES(
     '$firstname1','$lastname1','$email1','$mosha1');";
@@ -214,7 +245,7 @@ define('ROOT_URL1', 'users.php');
     <div class="card">
       <div class="container">
             <h3>Contact <?php echo $personi3->getEmri(); ?></h3>
-            <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="forma" required>
+            <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="forma">
               <input type="text" name="firstname1" placeholder="Firstname"><br>
               <input type="text" name="lastname1" placeholder="Lastname"><br>
               <input type="email" name="email1" placeholder="Email"><br>
@@ -244,10 +275,7 @@ define('ROOT_URL1', 'users.php');
         echo "<p>Ju lutem shenoni email valid</p>";
       }
       else{
-        $firstname2 = test_input($firstname2);
-    $lastname2 = test_input($lastname2);
-    $email2 = test_input($email2);
-    $mosha2 = test_input($mosha2);
+
     
     $query2 = "INSERT INTO kontaktlirim(firstname2,lastname2,email2,mosha2) VALUES(
     '$firstname2','$lastname2','$email2','$mosha2');";
@@ -258,17 +286,6 @@ define('ROOT_URL1', 'users.php');
       echo 'ERROR: '. mysqli_error($conn);
     }
   }
-  }
-?>
-<?php 
-  if(isset($_POST['submit2'])){
-    $firstname = htmlentities($_POST['firstname2']);
-    $lastname = htmlentities($_POST['lastname2']);
-    $email = htmlentities($_POST['email2']);
-
-    setcookie('firstname2', $firstname, time() + 3600);
-    setcookie('lastname2', $lastname, time() + 3600);
-    setcookie('email2', $email, time() + 3600);
   }
 ?>
   <div class="column"  id="lirim" style="display: none;">
