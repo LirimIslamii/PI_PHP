@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
  <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>" />
  <link rel="stylesheet" href="animation.css?v=<?php echo time(); ?>" />
- <link rel="stylesheet" type="text/css" href="policy.css">
+ <link rel="stylesheet" type="text/css" href="policy.css?v=<?php echo time(); ?>">
     <title>iCloud Activation Lock Removal</title>
 	</head>
 <body>
@@ -92,7 +92,6 @@ function ndarja($text){
 	</section>
 
 	<section id="id7">
-		<p style='padding-top: 100px'></p>
 		<?php titulli("Sharing your personal information");
 		$text = "<p>We do not sell, trade, or rent Users personal identification information to others. We may share generic aggregated demographic information not linked to any personal identification information regarding visitors and users with our business partners, trusted affiliates and advertisers for the purposes outlined above. We may use third party service providers to help us operate our business and the Site or administer activities on our behalf, such as sending out newsletters or surveys. We may share your information with these third parties for those limited purposes provided that you have given us your permission.</p>";
 		ndarja($text); ?>
