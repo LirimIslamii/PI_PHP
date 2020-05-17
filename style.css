@@ -379,9 +379,7 @@ nav {
 }
 
 .network {
-	display: flex;
 	width: 100%;
-	margin: auto;
 	height: 92vh;
 	align-items: center;
 	background-image:url('images/sim2.jpg');
@@ -389,60 +387,47 @@ nav {
 	background-size: 1500px 750px;
 }
 .netw {
-	width:25%;
 	color:white;
 	height: 50px;
 	font-size: 18px;
-	margin-left: 395px;
-	margin-top:40px;
+	margin-left:530px;
+	margin-top:20px;
 	background: -moz-linear-gradient(top, #696969 30%, #000000 100%);
 	background: -webkit-linear-gradient(top, #696969 30%, #000000 100%);
-    background-size: 200% auto;
     box-shadow: 0 0 20px #eee;
     border-radius: 10px;
-    width: 200px;
+    width: 240px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	border-radius: 10px; 
+}
+.net:focus {
+	outline:none;
 }
 .netw:focus{
 	outline:none;
 }
 .check img {
-	margin-left:150px;
+	margin-left:-200px;
 	margin-top:50px;
 }
 .inbox h1{
 	color:white;
-	margin-top:-50px;
-	margin-left:340px;
+	margin-top:150px;
+	margin-left:500px;
 	font-style:sans-serif;
 	font-size:45px;
 }
-.inbox h4{
-	margin-left:370px;
-	margin-top:20px;
-	color:white;
-	font-weight:bold;
-}
+
 .inbox h4:nth-child(2){
-	margin-left:370px;
+	margin-left:520px;
 	margin-top:40px;
 	color:white;
 	font-weight:bold;
 }
 .inbox #imei{
-	width:40%;
-	margin-left:360px;
+	width:270px;
+	margin-left:515px;
 	margin-top:-20px;
-	border-radius:5px;
-	border-bottom: 3px solid #fff;
-	box-sizing:border-box;
-	padding:10px 10px;
-}
-.inbox #email{
-	width:40%;
-	margin-left:360px;
-	margin-top:-5px;
 	border-radius:5px;
 	border-bottom: 3px solid #fff;
 	box-sizing:border-box;
@@ -451,7 +436,7 @@ nav {
 .check p{
 	color:white;
 	font-size:18px;
-	margin-left:200px;
+	margin-left:-150px;
 }
 
 .track {	
