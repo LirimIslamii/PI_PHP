@@ -1,5 +1,6 @@
 function validate(){
 
+
 			$("#unlocking").submit(function(e){
 				e.preventDefault();
 
@@ -8,6 +9,7 @@ function validate(){
 
 		if(!iphone.options.namedItem("select").selected){
 			if(imei.length < 15){
+
 				$("#err").text("IMEI must be 15 digits!").css("margin","0");
 
 				if(imei == "" || imei == null)
@@ -15,7 +17,7 @@ function validate(){
 
 			}
 
-		else {
+			else {
 
 			$("#err").text("");
 			$('.modal').modal({
@@ -24,6 +26,18 @@ function validate(){
 			   });
 
 		$("#btn_1").click(function(){
+
+
+			var email = $("#email").val();
+
+				if(email == ""){
+					swal("Insert an  Email 🤨",{
+						buttons: "OK"
+					});
+					return false;
+				}
+
+				else {
 
 			$.ajax({
 			url: "https://formspree.io/mpzyqaey", 
@@ -57,9 +71,10 @@ function validate(){
 							},3000);
 
 							});
+								}
 						});
+					}
 				}
-			}
 		else{
 				swal("Please Choose an iPhone 😀!",{
 						buttons: "OK"
