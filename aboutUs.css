@@ -157,3 +157,14 @@ body, html {
   transform: translate(-50%, -50%);
   color: white;
 }
+
+.forma input{
+  margin-left: 10px;
+  padding: 5px;
+  margin:5px;
+  width: 30%;
+}
+.forma input[type=submit]{
+  background-color: black;
+  color: white;
+}
