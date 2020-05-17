@@ -51,13 +51,13 @@
           setcookie('email2', $email, time() + 3600);
       }
       if(isset($_POST['submit1'])){
-          $firstname = htmlentities($_POST['firstname1']);
-          $lastname = htmlentities($_POST['lastname1']);
-          $email = htmlentities($_POST['email1']);
+          $firstname1 = htmlentities($_POST['firstname1']);
+          $lastname1 = htmlentities($_POST['lastname1']);
+          $email1 = htmlentities($_POST['email1']);
 
-          setcookie('firstname1', $firstname, time() + 3600);
-          setcookie('lastname1', $lastname, time() + 3600);
-          setcookie('email1', $email, time() + 3600);
+          setcookie('firstname1', $firstname1, time() + 3600);
+          setcookie('lastname1', $lastname1, time() + 3600);
+          setcookie('email1', $email1, time() + 3600);
       }
       if(isset($_POST['submit3'])){
           $firstname = htmlentities($_POST['firstname3']);
@@ -251,7 +251,7 @@ define('ROOT_URL1', 'users.php');
               <input type="email" name="email1" placeholder="Email"><br>
               <input type="number" name="mosha1" placeholder="Mosha"><br>
               <input type="submit" name="submit1" value="Submit"><br>
-              <button><a href="users.php">Set Cookes</a></button>
+              <button class="buton"><a class="buton" href="users.php">Set Cookes</a></button>
             </form>
       </div>
     </div>
@@ -298,7 +298,7 @@ define('ROOT_URL1', 'users.php');
               <input type="email" name="email2" placeholder="Email"><br>
               <input type="number" name="mosha2" placeholder="Mosha"><br>
               <input type="submit" name="submit2" value="Submit"><br>
-              <button><a href="usersLirim.php">Set Cookes</a></button>
+              <button class="buton"><a class="buton" href="usersLirim.php">Set Cookes</a></button>
             </form>
       </div>
     </div>
@@ -343,7 +343,7 @@ define('ROOT_URL1', 'users.php');
               <input type="email" name="email3" placeholder="Email"><br>
               <input type="number" name="mosha3" placeholder="Mosha"><br>
               <input type="submit" name="submit3" value="Submit"><br>
-              <button><a href="usersUran.php">Set Cookes</a></button>
+              <button class="buton"><a class="buton" href="usersUran.php">Set Cookes</a></button>
             </form>
       </div>
     </div>
@@ -400,3 +400,4 @@ th {
   color: white;
 }
 </style>
+
